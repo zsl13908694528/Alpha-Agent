@@ -599,26 +599,26 @@ html.dark {
       .hero-actions {
         .el-button {
           &.el-button--primary {
-            background: white !important;
-            color: #667eea !important;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+            color: white !important;
             border: none !important;
 
             &:hover {
-              background: rgba(255, 255, 255, 0.9) !important;
+              background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
             }
 
             .el-icon {
-              color: #667eea !important;
+              color: white !important;
             }
           }
 
           &:not(.el-button--primary) {
-            background: rgba(255, 255, 255, 0.1) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
             color: white !important;
-            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
 
             &:hover {
-              background: rgba(255, 255, 255, 0.2) !important;
+              background: rgba(255, 255, 255, 0.15) !important;
             }
 
             .el-icon {

@@ -4,8 +4,8 @@
     <div class="welcome-section">
       <div class="welcome-content">
         <h1 class="welcome-title">
-          欢迎使用 TradingAgents-CN
-          <span class="version-badge">v1.0.0-preview</span>
+          欢迎使用 Alpha-Agent
+          <span class="version-badge">v1.0.0</span>
         </h1>
         <p class="welcome-subtitle">
           现代化的多智能体股票分析学习平台，辅助你掌握更全面的市场视角分析股票
@@ -23,33 +23,6 @@
       </div>
     </div>
 
-
-    <!-- 学习中心推荐卡片 -->
-    <el-card class="learning-highlight-card">
-      <div class="learning-highlight">
-        <div class="learning-icon">
-          <el-icon size="48"><Reading /></el-icon>
-        </div>
-        <div class="learning-content">
-          <h2>📚 AI股票分析学习中心</h2>
-          <p>从零开始学习AI、大语言模型和智能股票分析。了解多智能体系统如何协作分析股票，掌握提示词工程技巧，选择合适的大模型，理解AI的能力与局限性。</p>
-          <div class="learning-features">
-            <span class="feature-tag">🤖 AI基础知识</span>
-            <span class="feature-tag">✍️ 提示词工程</span>
-            <span class="feature-tag">🎯 模型选择</span>
-            <span class="feature-tag">📊 分析原理</span>
-            <span class="feature-tag">⚠️ 风险认知</span>
-            <span class="feature-tag">🎓 实战教程</span>
-          </div>
-        </div>
-        <div class="learning-action">
-          <el-button type="primary" size="large" @click="goToLearning">
-            <el-icon><Reading /></el-icon>
-            开始学习
-          </el-button>
-        </div>
-      </div>
-    </el-card>
 
     <!-- 主要功能区域 -->
     <el-row :gutter="24" class="main-content">
@@ -624,36 +597,54 @@ onMounted(async () => {
 <style lang="scss" scoped>
 .dashboard {
   .welcome-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 12px;
-    padding: 40px;
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
+    border-radius: 16px;
+    padding: 48px;
     color: white;
     margin-bottom: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      pointer-events: none;
+    }
 
     .welcome-content {
+      position: relative;
+      z-index: 1;
+      
       .welcome-title {
-        font-size: 32px;
-        font-weight: 600;
+        font-size: 36px;
+        font-weight: 700;
         margin: 0 0 12px 0;
         display: flex;
         align-items: center;
         gap: 16px;
 
         .version-badge {
-          background: rgba(255, 255, 255, 0.2);
-          padding: 4px 12px;
+          background: rgba(255, 255, 255, 0.12);
+          padding: 6px 14px;
           border-radius: 20px;
           font-size: 14px;
-          font-weight: 400;
+          font-weight: 500;
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
       }
 
       .welcome-subtitle {
         font-size: 16px;
-        opacity: 0.9;
+        opacity: 0.8;
         margin: 0;
       }
     }
@@ -661,67 +652,27 @@ onMounted(async () => {
     .welcome-actions {
       display: flex;
       gap: 16px;
-    }
-  }
-
-  .learning-highlight-card {
-    margin-bottom: 24px;
-    border: 2px solid var(--el-color-primary);
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
-
-    .learning-highlight {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      padding: 8px;
-
-      .learning-icon {
-        flex-shrink: 0;
-        width: 80px;
-        height: 80px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      position: relative;
+      z-index: 1;
+      
+      .el-button--primary {
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        border: none;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+        
+        &:hover {
+          background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        }
+      }
+      
+      .el-button:not(.el-button--primary) {
+        background: rgba(255, 255, 255, 0.08);
         color: white;
-      }
-
-      .learning-content {
-        flex: 1;
-
-        h2 {
-          font-size: 20px;
-          font-weight: 600;
-          margin: 0 0 12px 0;
-          color: var(--el-text-color-primary);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        
+        &:hover {
+          background: rgba(255, 255, 255, 0.15);
         }
-
-        p {
-          font-size: 14px;
-          color: var(--el-text-color-regular);
-          line-height: 1.6;
-          margin: 0 0 16px 0;
-        }
-
-        .learning-features {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 8px;
-
-          .feature-tag {
-            padding: 4px 12px;
-            background: var(--el-color-primary-light-9);
-            color: var(--el-color-primary);
-            border-radius: 16px;
-            font-size: 13px;
-            font-weight: 500;
-          }
-        }
-      }
-
-      .learning-action {
-        flex-shrink: 0;
       }
     }
   }
@@ -1045,19 +996,6 @@ onMounted(async () => {
 
       .welcome-actions {
         justify-content: center;
-      }
-    }
-
-    .learning-highlight-card {
-      .learning-highlight {
-        flex-direction: column;
-        text-align: center;
-
-        .learning-content {
-          .learning-features {
-            justify-content: center;
-          }
-        }
       }
     }
 

@@ -1,7 +1,7 @@
 {
-  "name": "tradingagents-frontend",
+  "name": "alpha-agent-frontend",
   "version": "1.0.0-preview",
-  "description": "TradingAgents-CN 现代化前端界面",
+  "description": "Alpha-Agent 现代化前端界面",
   "type": "module",
   "scripts": {
     "dev": "vite",

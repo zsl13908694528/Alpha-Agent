@@ -5,7 +5,7 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="hero-title">
-            TradingAgents-CN
+            Alpha-Agent
             <span class="version-badge">v1.0.0-preview</span>
           </h1>
           <p class="hero-subtitle">
@@ -15,10 +15,6 @@
             基于先进的AI技术，为投资者提供专业、准确、及时的股票分析服务。
             采用多智能体协作模式，从不同角度对股票进行全方位分析，助您做出更明智的投资决策。
           </p>
-          <div class="hero-acknowledgment">
-            <el-icon><Star /></el-icon>
-            <span>基于 <a href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener noreferrer">TradingAgents</a> 项目开发，感谢原项目的贡献</span>
-          </div>
           <div class="hero-actions">
             <el-button type="primary" size="large" @click="goToAnalysis">
               <el-icon><TrendCharts /></el-icon>
@@ -246,74 +242,6 @@
       </div>
     </div>
 
-    <!-- 项目来源 -->
-    <div class="origin-section">
-      <div class="section-header">
-        <h2 class="section-title">项目来源</h2>
-        <p class="section-subtitle">致敬开源，感谢原项目的贡献</p>
-      </div>
-
-      <div class="origin-content">
-        <div class="origin-card">
-          <div class="origin-header">
-            <div class="origin-icon">
-              <el-icon><Link /></el-icon>
-            </div>
-            <div class="origin-info">
-              <h3>TradingAgents</h3>
-              <a href="https://github.com/TauricResearch/TradingAgents"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="origin-link">
-                <el-icon><Link /></el-icon>
-                github.com/TauricResearch/TradingAgents
-              </a>
-            </div>
-          </div>
-
-          <div class="origin-description">
-            <p>
-              <strong>TradingAgents-CN</strong> 是基于 <strong>TradingAgents</strong> 项目开发的中文本地化版本。
-              原项目由 Tauric Research 团队开发，是一个创新的多智能体股票分析框架。
-            </p>
-            <p>
-              我们在原项目的基础上进行了以下改进和扩展：
-            </p>
-            <ul class="origin-improvements">
-              <li>
-                <el-icon class="check-icon"><CircleCheck /></el-icon>
-                <span><strong>完整的中文支持：</strong>针对中国A股市场优化，支持中文数据源和分析</span>
-              </li>
-              <li>
-                <el-icon class="check-icon"><CircleCheck /></el-icon>
-                <span><strong>现代化Web界面：</strong>基于 Vue 3 + Element Plus 开发的全新前端界面</span>
-              </li>
-              <li>
-                <el-icon class="check-icon"><CircleCheck /></el-icon>
-                <span><strong>增强的数据源：</strong>集成 Tushare、AKShare 等中国市场数据源</span>
-              </li>
-              <li>
-                <el-icon class="check-icon"><CircleCheck /></el-icon>
-                <span><strong>多LLM支持：</strong>支持国内外主流大语言模型（OpenAI、Claude、智谱AI、DeepSeek等）</span>
-              </li>
-              <li>
-                <el-icon class="check-icon"><CircleCheck /></el-icon>
-                <span><strong>批量分析功能：</strong>支持批量股票分析和任务管理</span>
-              </li>
-              <li>
-                <el-icon class="check-icon"><CircleCheck /></el-icon>
-                <span><strong>用户系统：</strong>完整的用户认证和个性化配置</span>
-              </li>
-            </ul>
-            <p class="origin-thanks">
-              <el-icon><Star /></el-icon>
-              <strong>特别感谢</strong> Tauric Research 团队的开源贡献，为我们提供了优秀的技术基础和设计理念。
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- 版本信息 -->
     <div class="version-section">
       <div class="section-header">
@@ -329,7 +257,7 @@
           <div class="version-details">
             <div class="version-item">
               <span class="label">发布日期</span>
-              <span class="value">2025-10-16</span>
+              <span class="value">2025-01-13</span>
             </div>
             <div class="version-item">
               <span class="label">构建时间</span>
@@ -397,7 +325,7 @@
             <el-icon><ChatDotRound /></el-icon>
           </div>
           <h4>微信公众号</h4>
-          <p>TradingAgents-CN</p>
+          <p>Alpha-Agent</p>
           <span class="contact-desc">最新动态和使用教程</span>
         </div>
 
@@ -422,7 +350,7 @@
     <!-- Footer -->
     <div class="footer-section">
       <div class="footer-content">
-        <p>&copy; 2025 TradingAgents-CN. All rights reserved.</p>
+        <p>&copy; 2025 Alpha-Agent. All rights reserved.</p>
         <p>许可证说明：开源组件遵循 Apache 2.0；前端与后端采用专有许可证（个人学习/研究免费，商业使用需授权）。</p>
       </div>
     </div>
@@ -441,10 +369,7 @@ import {
   Setting,
   Message,
   ChatDotRound,
-  Cpu,
-  Star,
-  Link,
-  CircleCheck
+  Cpu
 } from '@element-plus/icons-vue'
 
 const router = useRouter()
@@ -465,15 +390,16 @@ const viewDocumentation = () => {
   margin: 0 auto;
   padding: 0 24px;
 
-  // Hero Section
+  // Hero Section - 深色渐变
   .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 16px;
-    padding: 60px 40px;
-    margin-bottom: 48px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%);
+    border-radius: 20px;
+    padding: 64px 48px;
+    margin-bottom: 56px;
     color: white;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.4);
 
     &::before {
       content: '';
@@ -482,7 +408,7 @@ const viewDocumentation = () => {
       left: 0;
       right: 0;
       bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.03"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
       pointer-events: none;
     }
 
@@ -498,68 +424,38 @@ const viewDocumentation = () => {
       flex: 1;
 
       .hero-title {
-        font-size: 48px;
-        font-weight: 700;
-        margin: 0 0 16px 0;
-        line-height: 1.2;
+        font-size: 52px;
+        font-weight: 800;
+        margin: 0 0 20px 0;
+        line-height: 1.1;
+        letter-spacing: -1px;
 
         .version-badge {
           display: inline-block;
-          background: rgba(255, 255, 255, 0.2);
-          padding: 4px 12px;
+          background: rgba(255, 255, 255, 0.12);
+          padding: 6px 14px;
           border-radius: 20px;
           font-size: 14px;
           font-weight: 500;
           margin-left: 16px;
           backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
       }
 
       .hero-subtitle {
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 500;
-        margin: 0 0 16px 0;
+        margin: 0 0 20px 0;
         opacity: 0.9;
       }
 
       .hero-description {
         font-size: 16px;
-        line-height: 1.6;
-        margin: 0 0 20px 0;
-        opacity: 0.8;
-        max-width: 600px;
-      }
-
-      .hero-acknowledgment {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 14px;
-        opacity: 0.9;
-        margin-bottom: 32px;
-        padding: 12px 16px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        max-width: 600px;
-
-        .el-icon {
-          font-size: 16px;
-          color: #ffd700;
-        }
-
-        a {
-          color: white;
-          text-decoration: none;
-          font-weight: 500;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-          transition: all 0.3s ease;
-
-          &:hover {
-            border-bottom-color: white;
-          }
-        }
+        line-height: 1.7;
+        margin: 0 0 32px 0;
+        opacity: 0.75;
+        max-width: 560px;
       }
 
       .hero-actions {
@@ -567,29 +463,33 @@ const viewDocumentation = () => {
         gap: 16px;
 
         .el-button {
-          padding: 12px 24px;
+          padding: 14px 28px;
           font-size: 16px;
-          border-radius: 8px;
+          border-radius: 10px;
+          font-weight: 600;
+          transition: all 0.3s ease;
 
           &.el-button--primary {
-            background: white;
-            color: #667eea;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
             border: none;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
 
             &:hover {
-              background: rgba(255, 255, 255, 0.9);
+              background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
               transform: translateY(-2px);
+              box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
             }
           }
 
           &:not(.el-button--primary) {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.08);
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
 
             &:hover {
-              background: rgba(255, 255, 255, 0.2);
+              background: rgba(255, 255, 255, 0.15);
               transform: translateY(-2px);
             }
           }
@@ -599,28 +499,33 @@ const viewDocumentation = () => {
 
     .hero-visual {
       .hero-card {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.06);
         backdrop-filter: blur(20px);
         border-radius: 16px;
-        padding: 32px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 36px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
 
         .hero-stats {
           display: flex;
-          gap: 24px;
+          gap: 32px;
 
           .stat-item {
             text-align: center;
 
             .stat-number {
-              font-size: 32px;
-              font-weight: 700;
+              font-size: 36px;
+              font-weight: 800;
               margin-bottom: 8px;
+              background: linear-gradient(135deg, #60a5fa, #a78bfa);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text;
             }
 
             .stat-label {
               font-size: 14px;
-              opacity: 0.8;
+              opacity: 0.7;
+              font-weight: 500;
             }
           }
         }
@@ -676,7 +581,7 @@ const viewDocumentation = () => {
           left: 0;
           right: 0;
           height: 4px;
-          background: linear-gradient(90deg, var(--el-color-primary), var(--el-color-success));
+          background: linear-gradient(90deg, #1e40af, #4338ca);
         }
 
         &:hover {
@@ -701,23 +606,23 @@ const viewDocumentation = () => {
             color: white;
 
             &.primary {
-              background: linear-gradient(135deg, var(--el-color-primary), #667eea);
+              background: linear-gradient(135deg, #1e40af, #3b82f6);
             }
 
             &.success {
-              background: linear-gradient(135deg, var(--el-color-success), #52c41a);
+              background: linear-gradient(135deg, #047857, #10b981);
             }
 
             &.warning {
-              background: linear-gradient(135deg, var(--el-color-warning), #faad14);
+              background: linear-gradient(135deg, #b45309, #f59e0b);
             }
 
             &.info {
-              background: linear-gradient(135deg, var(--el-color-info), #1890ff);
+              background: linear-gradient(135deg, #0369a1, #0ea5e9);
             }
 
             &.danger {
-              background: linear-gradient(135deg, var(--el-color-danger), #ff4d4f);
+              background: linear-gradient(135deg, #b91c1c, #ef4444);
             }
           }
 
@@ -725,7 +630,7 @@ const viewDocumentation = () => {
             margin: 0;
             font-size: 20px;
             font-weight: 600;
-            color: #1a202c;
+            color: var(--el-text-color-primary);
           }
         }
 
@@ -744,155 +649,6 @@ const viewDocumentation = () => {
             border-radius: 12px;
             border: none;
             font-size: 12px;
-          }
-        }
-      }
-    }
-  }
-
-  // Origin Section
-  .origin-section {
-    margin-bottom: 80px;
-
-    .origin-content {
-      max-width: 900px;
-      margin: 0 auto;
-
-      .origin-card {
-        background: var(--el-bg-color);
-        border-radius: 16px;
-        padding: 40px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid var(--el-border-color-lighter);
-        position: relative;
-        overflow: hidden;
-
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 4px;
-          background: linear-gradient(90deg, #667eea, #764ba2);
-        }
-
-        .origin-header {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-          margin-bottom: 32px;
-          padding-bottom: 24px;
-          border-bottom: 2px solid var(--el-border-color-lighter);
-
-          .origin-icon {
-            width: 64px;
-            height: 64px;
-            border-radius: 16px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: white;
-            flex-shrink: 0;
-          }
-
-          .origin-info {
-            flex: 1;
-
-            h3 {
-              margin: 0 0 8px 0;
-              font-size: 24px;
-              font-weight: 700;
-              color: var(--el-text-color-primary);
-            }
-
-            .origin-link {
-              display: inline-flex;
-              align-items: center;
-              gap: 6px;
-              color: var(--el-color-primary);
-              text-decoration: none;
-              font-size: 14px;
-              font-weight: 500;
-              transition: all 0.3s ease;
-
-              .el-icon {
-                font-size: 14px;
-              }
-
-              &:hover {
-                color: #667eea;
-                text-decoration: underline;
-              }
-            }
-          }
-        }
-
-        .origin-description {
-          p {
-            color: var(--el-text-color-regular);
-            line-height: 1.8;
-            margin: 0 0 20px 0;
-            font-size: 15px;
-
-            strong {
-              color: var(--el-text-color-primary);
-              font-weight: 600;
-            }
-          }
-
-          .origin-improvements {
-            list-style: none;
-            padding: 0;
-            margin: 24px 0;
-
-            li {
-              display: flex;
-              align-items: flex-start;
-              gap: 12px;
-              padding: 12px 0;
-              color: var(--el-text-color-regular);
-              line-height: 1.6;
-              font-size: 15px;
-
-              .check-icon {
-                color: var(--el-color-success);
-                font-size: 18px;
-                margin-top: 2px;
-                flex-shrink: 0;
-              }
-
-              strong {
-                color: var(--el-text-color-primary);
-                font-weight: 600;
-              }
-            }
-          }
-
-          .origin-thanks {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 32px;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            border-radius: 12px;
-            border-left: 4px solid #667eea;
-            font-size: 15px;
-            color: var(--el-text-color-regular);
-
-            .el-icon {
-              color: #ffd700;
-              font-size: 20px;
-              flex-shrink: 0;
-            }
-
-            strong {
-              color: var(--el-text-color-primary);
-              font-weight: 600;
-            }
           }
         }
       }
@@ -938,15 +694,15 @@ const viewDocumentation = () => {
             color: white;
 
             &.frontend {
-              background: linear-gradient(135deg, #42b883, #35495e);
+              background: linear-gradient(135deg, #047857, #1e3a5f);
             }
 
             &.backend {
-              background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+              background: linear-gradient(135deg, #b91c1c, #7c2d12);
             }
 
             &.ai {
-              background: linear-gradient(135deg, #a55eea, #26de81);
+              background: linear-gradient(135deg, #6d28d9, #1e40af);
             }
           }
 
@@ -954,7 +710,7 @@ const viewDocumentation = () => {
             margin: 0;
             font-size: 20px;
             font-weight: 600;
-            color: #1a202c;
+            color: var(--el-text-color-primary);
           }
         }
 
@@ -972,7 +728,7 @@ const viewDocumentation = () => {
 
             .tech-name {
               font-weight: 500;
-              color: #1a202c;
+              color: var(--el-text-color-primary);
             }
 
             .tech-desc {
@@ -995,12 +751,13 @@ const viewDocumentation = () => {
       gap: 32px;
 
       .version-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
         border-radius: 16px;
-        padding: 32px;
+        padding: 36px;
         color: white;
         position: relative;
         overflow: hidden;
+        box-shadow: 0 10px 40px rgba(15, 23, 42, 0.3);
 
         &::before {
           content: '';
@@ -1009,7 +766,7 @@ const viewDocumentation = () => {
           right: -50%;
           width: 100%;
           height: 100%;
-          background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+          background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
           pointer-events: none;
         }
 
@@ -1021,17 +778,22 @@ const viewDocumentation = () => {
 
           .version-number {
             font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 8px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
           }
 
           .version-status {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 4px 16px;
+            background: rgba(255, 255, 255, 0.12);
+            padding: 6px 18px;
             border-radius: 20px;
             font-size: 14px;
             display: inline-block;
             backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
           }
         }
 
@@ -1042,15 +804,15 @@ const viewDocumentation = () => {
           .version-item {
             display: flex;
             justify-content: space-between;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
             &:last-child {
               border-bottom: none;
             }
 
             .label {
-              opacity: 0.8;
+              opacity: 0.7;
             }
 
             .value {
@@ -1063,7 +825,7 @@ const viewDocumentation = () => {
       .framework-info {
         background: var(--el-bg-color);
         border-radius: 16px;
-        padding: 32px;
+        padding: 36px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         border: 1px solid var(--el-border-color-lighter);
 
@@ -1071,7 +833,7 @@ const viewDocumentation = () => {
           margin: 0 0 24px 0;
           font-size: 20px;
           font-weight: 600;
-          color: #1a202c;
+          color: var(--el-text-color-primary);
         }
 
         .framework-list {
@@ -1088,12 +850,12 @@ const viewDocumentation = () => {
 
             .name {
               font-weight: 500;
-              color: #1a202c;
+              color: var(--el-text-color-primary);
             }
 
             .version {
-              background: var(--el-color-primary-light-9);
-              color: var(--el-color-primary);
+              background: linear-gradient(135deg, #1e40af, #3b82f6);
+              color: white;
               padding: 4px 12px;
               border-radius: 12px;
               font-size: 12px;
@@ -1104,6 +866,7 @@ const viewDocumentation = () => {
       }
     }
   }
+
   // Contact Section
   .contact-section {
     margin-bottom: 80px;
@@ -1139,19 +902,19 @@ const viewDocumentation = () => {
           color: white;
 
           &.email {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(135deg, #b91c1c, #dc2626);
           }
 
           &.qq {
-            background: linear-gradient(135deg, #12c2e9, #c471ed);
+            background: linear-gradient(135deg, #0369a1, #6d28d9);
           }
 
           &.wechat {
-            background: linear-gradient(135deg, #07c160, #00d4aa);
+            background: linear-gradient(135deg, #047857, #059669);
           }
 
           &.docs {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #1e40af, #4338ca);
           }
         }
 
@@ -1159,17 +922,17 @@ const viewDocumentation = () => {
           margin: 0 0 12px 0;
           font-size: 18px;
           font-weight: 600;
-          color: #1a202c;
+          color: var(--el-text-color-primary);
         }
 
         p {
           margin: 0 0 8px 0;
           font-size: 16px;
           font-weight: 500;
-          color: #1a202c;
+          color: var(--el-text-color-primary);
 
           .doc-link {
-            color: var(--el-color-primary);
+            color: #2563eb;
             text-decoration: none;
             font-weight: 500;
 

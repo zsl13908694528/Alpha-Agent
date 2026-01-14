@@ -73,11 +73,6 @@ const categoryMap: Record<string, any> = {
     icon: '⚠️',
     description: '了解AI的潜在问题和正确使用方式'
   },
-  'resources': {
-    title: '源项目与论文',
-    icon: '📖',
-    description: 'TradingAgents项目介绍和学术论文资源'
-  },
   'tutorials': {
     title: '实战教程',
     icon: '🎓',
@@ -146,7 +141,7 @@ const articlesDatabase: Record<string, any[]> = {
     {
       id: 'multi-agent-system',
       title: '多智能体系统详解',
-      description: '深入理解TradingAgents-CN的多智能体协作机制',
+      description: '深入理解Alpha-Agent的多智能体协作机制',
       readTime: '15分钟',
       views: 1654,
       difficulty: 'warning',
@@ -164,31 +159,11 @@ const articlesDatabase: Record<string, any[]> = {
       difficultyText: '入门'
     }
   ],
-  'resources': [
-    {
-      id: 'tradingagents-intro',
-      title: 'TradingAgents项目介绍',
-      description: '了解TradingAgents-CN的源项目TradingAgents的架构和特性',
-      readTime: '15分钟',
-      views: 1432,
-      difficulty: 'warning',
-      difficultyText: '进阶'
-    },
-    {
-      id: 'paper-guide',
-      title: 'TradingAgents论文解读',
-      description: '深度解读TradingAgents学术论文的核心内容和创新点',
-      readTime: '20分钟',
-      views: 987,
-      difficulty: 'danger',
-      difficultyText: '高级'
-    }
-  ],
   'tutorials': [
     {
       id: 'getting-started',
       title: '快速入门教程',
-      description: '从零开始学习如何使用TradingAgents-CN进行股票分析',
+      description: '从零开始学习如何使用Alpha-Agent进行股票分析',
       readTime: '10分钟',
       views: 3456,
       difficulty: 'success',
@@ -197,7 +172,7 @@ const articlesDatabase: Record<string, any[]> = {
     {
       id: 'usage-guide-preview',
       title: '使用指南（试用版）',
-      description: 'TradingAgents-CN v1.0.0-preview 使用指南与试用说明',
+      description: 'Alpha-Agent v1.0.0-preview 使用指南与试用说明',
       readTime: '15分钟',
       views: 1288,
       difficulty: 'success',
