@@ -20,10 +20,12 @@
               <el-icon><TrendCharts /></el-icon>
               开始分析
             </el-button>
+            <!-- 查看文档按钮已隐藏
             <el-button size="large" @click="viewDocumentation">
               <el-icon><Document /></el-icon>
               查看文档
             </el-button>
+            -->
           </div>
         </div>
         <div class="hero-visual">
@@ -143,158 +145,11 @@
       </div>
     </div>
 
-    <!-- 技术架构 -->
-    <div class="tech-section">
-      <div class="section-header">
-        <h2 class="section-title">技术架构</h2>
-        <p class="section-subtitle">现代化的技术栈，确保系统的稳定性和可扩展性</p>
-      </div>
+    <!-- 技术架构模块已删除 -->
 
-      <div class="tech-stack">
-        <div class="tech-category">
-          <div class="tech-header">
-            <div class="tech-icon frontend">
-              <el-icon><Monitor /></el-icon>
-            </div>
-            <h3>前端技术</h3>
-          </div>
-          <div class="tech-list">
-            <div class="tech-item">
-              <span class="tech-name">Vue 3</span>
-              <span class="tech-desc">现代化前端框架</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">TypeScript</span>
-              <span class="tech-desc">类型安全开发</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">Element Plus</span>
-              <span class="tech-desc">企业级UI组件库</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">Pinia</span>
-              <span class="tech-desc">状态管理</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">Vite</span>
-              <span class="tech-desc">快速构建工具</span>
-            </div>
-          </div>
-        </div>
+    <!-- 版本信息模块已删除 -->
 
-        <div class="tech-category">
-          <div class="tech-header">
-            <div class="tech-icon backend">
-              <el-icon><Monitor /></el-icon>
-            </div>
-            <h3>后端技术</h3>
-          </div>
-          <div class="tech-list">
-            <div class="tech-item">
-              <span class="tech-name">FastAPI</span>
-              <span class="tech-desc">高性能API框架</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">Python 3.10+</span>
-              <span class="tech-desc">现代Python开发</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">Redis</span>
-              <span class="tech-desc">高性能缓存和队列</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">MongoDB</span>
-              <span class="tech-desc">文档数据库</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">异步处理</span>
-              <span class="tech-desc">高并发任务处理</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-category">
-          <div class="tech-header">
-            <div class="tech-icon ai">
-              <el-icon><Cpu /></el-icon>
-            </div>
-            <h3>AI技术</h3>
-          </div>
-          <div class="tech-list">
-            <div class="tech-item">
-              <span class="tech-name">多智能体系统</span>
-              <span class="tech-desc">协作式AI分析</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">大语言模型</span>
-              <span class="tech-desc">GPT/Claude/Qwen等</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">机器学习</span>
-              <span class="tech-desc">智能预测算法</span>
-            </div>
-            <div class="tech-item">
-              <span class="tech-name">数据挖掘</span>
-              <span class="tech-desc">深度数据分析</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 版本信息 -->
-    <div class="version-section">
-      <div class="section-header">
-        <h2 class="section-title">版本信息</h2>
-      </div>
-
-      <div class="version-info">
-        <div class="version-card">
-          <div class="version-main">
-            <div class="version-number">v1.0.0-preview</div>
-            <div class="version-status">预览版</div>
-          </div>
-          <div class="version-details">
-            <div class="version-item">
-              <span class="label">发布日期</span>
-              <span class="value">2025-01-13</span>
-            </div>
-            <div class="version-item">
-              <span class="label">构建时间</span>
-              <span class="value">{{ buildTime }}</span>
-            </div>
-            <div class="version-item">
-              <span class="label">API版本</span>
-              <span class="value">v1.0.0-preview</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="framework-info">
-          <h4>技术版本</h4>
-          <div class="framework-list">
-            <div class="framework-item">
-              <span class="name">Vue</span>
-              <span class="version">3.4.0</span>
-            </div>
-            <div class="framework-item">
-              <span class="name">Element Plus</span>
-              <span class="version">2.4.4</span>
-            </div>
-            <div class="framework-item">
-              <span class="name">FastAPI</span>
-              <span class="version">0.104.0</span>
-            </div>
-            <div class="framework-item">
-              <span class="name">Python</span>
-              <span class="version">3.10+</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 联系我们 -->
+    <!-- 联系我们模块及Footer已隐藏
     <div class="contact-section">
       <div class="section-header">
         <h2 class="section-title">联系我们</h2>
@@ -347,13 +202,13 @@
       </div>
     </div>
 
-    <!-- Footer -->
     <div class="footer-section">
       <div class="footer-content">
         <p>&copy; 2025 Alpha-Agent. All rights reserved.</p>
         <p>许可证说明：开源组件遵循 Apache 2.0；前端与后端采用专有许可证（个人学习/研究免费，商业使用需授权）。</p>
       </div>
     </div>
+    -->
   </div>
 </template>
 
@@ -386,20 +241,20 @@ const viewDocumentation = () => {
 
 <style lang="scss" scoped>
 .about {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
 
-  // Hero Section - 深色渐变
+  // Hero Section - 调浅背景色让标题更清晰
   .hero-section {
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%);
-    border-radius: 20px;
-    padding: 64px 48px;
-    margin-bottom: 56px;
+    background: linear-gradient(135deg, #334155 0%, #3b82f6 50%, #6366f1 100%);
+    border-radius: 16px;
+    padding: 40px 32px;
+    margin-bottom: 40px;
     color: white;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.4);
+    box-shadow: 0 16px 48px rgba(15, 23, 42, 0.35);
 
     &::before {
       content: '';
@@ -415,7 +270,7 @@ const viewDocumentation = () => {
     .hero-content {
       display: flex;
       align-items: center;
-      gap: 60px;
+      gap: 40px;
       position: relative;
       z-index: 1;
     }
@@ -424,48 +279,48 @@ const viewDocumentation = () => {
       flex: 1;
 
       .hero-title {
-        font-size: 52px;
-        font-weight: 800;
-        margin: 0 0 20px 0;
-        line-height: 1.1;
-        letter-spacing: -1px;
+        font-size: 36px;
+        font-weight: 700;
+        margin: 0 0 14px 0;
+        line-height: 1.2;
+        letter-spacing: -0.5px;
 
         .version-badge {
           display: inline-block;
           background: rgba(255, 255, 255, 0.12);
-          padding: 6px 14px;
-          border-radius: 20px;
-          font-size: 14px;
+          padding: 4px 10px;
+          border-radius: 16px;
+          font-size: 12px;
           font-weight: 500;
-          margin-left: 16px;
+          margin-left: 12px;
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255, 255, 255, 0.1);
         }
       }
 
       .hero-subtitle {
-        font-size: 26px;
+        font-size: 18px;
         font-weight: 500;
-        margin: 0 0 20px 0;
+        margin: 0 0 14px 0;
         opacity: 0.9;
       }
 
       .hero-description {
-        font-size: 16px;
-        line-height: 1.7;
-        margin: 0 0 32px 0;
+        font-size: 13px;
+        line-height: 1.6;
+        margin: 0 0 20px 0;
         opacity: 0.75;
-        max-width: 560px;
+        max-width: 480px;
       }
 
       .hero-actions {
         display: flex;
-        gap: 16px;
+        gap: 12px;
 
         .el-button {
-          padding: 14px 28px;
-          font-size: 16px;
-          border-radius: 10px;
+          padding: 10px 20px;
+          font-size: 13px;
+          border-radius: 8px;
           font-weight: 600;
           transition: all 0.3s ease;
 
@@ -501,21 +356,21 @@ const viewDocumentation = () => {
       .hero-card {
         background: rgba(255, 255, 255, 0.06);
         backdrop-filter: blur(20px);
-        border-radius: 16px;
-        padding: 36px;
+        border-radius: 12px;
+        padding: 24px;
         border: 1px solid rgba(255, 255, 255, 0.1);
 
         .hero-stats {
           display: flex;
-          gap: 32px;
+          gap: 24px;
 
           .stat-item {
             text-align: center;
 
             .stat-number {
-              font-size: 36px;
-              font-weight: 800;
-              margin-bottom: 8px;
+              font-size: 26px;
+              font-weight: 700;
+              margin-bottom: 6px;
               background: linear-gradient(135deg, #60a5fa, #a78bfa);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
@@ -523,7 +378,7 @@ const viewDocumentation = () => {
             }
 
             .stat-label {
-              font-size: 14px;
+              font-size: 12px;
               opacity: 0.7;
               font-weight: 500;
             }
@@ -536,20 +391,20 @@ const viewDocumentation = () => {
   // Section Headers
   .section-header {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 
     .section-title {
-      font-size: 36px;
-      font-weight: 700;
+      font-size: 26px;
+      font-weight: 600;
       color: var(--el-text-color-primary);
-      margin: 0 0 16px 0;
+      margin: 0 0 10px 0;
     }
 
     .section-subtitle {
-      font-size: 18px;
+      font-size: 14px;
       color: var(--el-text-color-regular);
       margin: 0;
-      max-width: 600px;
+      max-width: 500px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -557,18 +412,18 @@ const viewDocumentation = () => {
 
   // Features Section
   .features-section {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
 
       .feature-card {
         background: var(--el-bg-color);
-        border-radius: 16px;
-        padding: 32px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
         border: 1px solid var(--el-border-color-lighter);
         transition: all 0.3s ease;
         position: relative;
@@ -580,29 +435,29 @@ const viewDocumentation = () => {
           top: 0;
           left: 0;
           right: 0;
-          height: 4px;
+          height: 3px;
           background: linear-gradient(90deg, #1e40af, #4338ca);
         }
 
         &:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+          transform: translateY(-4px);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         }
 
         .feature-header {
           display: flex;
           align-items: center;
-          gap: 16px;
-          margin-bottom: 16px;
+          gap: 12px;
+          margin-bottom: 10px;
 
           .feature-icon {
-            width: 56px;
-            height: 56px;
-            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 18px;
             color: white;
 
             &.primary {
@@ -628,7 +483,7 @@ const viewDocumentation = () => {
 
           h3 {
             margin: 0;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 600;
             color: var(--el-text-color-primary);
           }
@@ -636,19 +491,20 @@ const viewDocumentation = () => {
 
         p {
           color: var(--el-text-color-regular);
-          line-height: 1.6;
-          margin: 0 0 20px 0;
+          line-height: 1.5;
+          margin: 0 0 12px 0;
+          font-size: 13px;
         }
 
         .feature-tags {
           display: flex;
           flex-wrap: wrap;
-          gap: 8px;
+          gap: 6px;
 
           .el-tag {
-            border-radius: 12px;
+            border-radius: 10px;
             border: none;
-            font-size: 12px;
+            font-size: 11px;
           }
         }
       }
@@ -657,7 +513,7 @@ const viewDocumentation = () => {
 
   // Tech Section
   .tech-section {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 
     .tech-stack {
       display: grid;

@@ -8,7 +8,9 @@
     >
       <div class="sidebar-header">
         <div class="logo">
+          <!-- Logo图标已隐藏
           <img src="/logo.svg" alt="Alpha-Agent" />
+          -->
           <span v-show="!appStore.sidebarCollapsed" class="logo-text">
             Alpha-Agent
           </span>
